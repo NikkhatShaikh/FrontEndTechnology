@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration form validation using jQuery</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="validation.js"></script>
+</head>
+<body>
+    ><h1>Registration form validation using jQuery</h1>
+<form action="" method="post" onsubmit="validate();" id="form_submission_ajax">
+    <table class="form-table">
+        <tr>
+            <td><label>Firstname:</label></td>
+            <td><input type="text" name="f_name" id="f_name">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="f_name_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Lastname:</label></td>
+            <td><input type="text" name="l_name" id="l_name"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="l_name_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Email:</label></td>
+            <td><input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="email_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="password_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Retype Password:</label></td>
+            <td><input type="password" name="re_password" id="re_password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="re_password_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Gender:</label></td>
+            <td><input type="radio" name="gender" id="gender" value="male" checked>Male
+                <input type="radio" name="gender" id="gender" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="gender_error"></td>
+        </tr>
+        <tr>
+            <td><label>Known Language:</label></td>
+            <td>
+                <input type="checkbox" name="language[]"  class="language" value="hindi">Hindi
+                <input type="checkbox" name="language[]"  class="language" value="english">English
+                <input type="checkbox" name="language[]"  class="language" value="gujarati">Gujarati
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="language_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Country:</label></td>
+            <td>
+                <select name="country" id="country">
+                    <option value="">Select Country</option>
+                    <option value="IN">India</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="US">United State</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="country_error" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Phone No:</label></td>
+            <td><input type="telephone" name="phone" id="phone"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="phone_error" class="error"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Submit"></td>
+        </tr>
+    </form>
+    <script src="validate.js"></script>
+</body>
+</html>

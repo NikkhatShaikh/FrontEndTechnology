@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>validation</title>
+</head>
+<body>
+    
+  <form id="myForm" name="myForm" action="" method="post" onclick="validate()">
+
+    <p>
+      <label for="name">Name <span></span></label>
+      <input id="name" name="name" >
+    </p>
+
+    <!-- <div>
+      <label for="name"> Enter Your Name:</label>
+      <input type="text" id="name" name="name" onblur="validateName()"/>
+      <span id="errorName"></span>
+    </div> -->
+    
+  <p>
+      <label for="age">Your Age <span></span></label>
+      <input id="age" name="age">
+    </p>
+    <!-- <p>
+      <label for="email">E-Mail <span></span></label>
+      <input id="email" name="email">
+    </p> -->
+    <div>
+      Email: <input type="text" id="email" name="email" onblur="validateEmail()"/><span id="errorEmail"></span>
+    </div>
+    <p>
+      <label for="mobile">Mobile Number <span></span></label>
+      <input id="mobile" name="mobile" type="tel"   required>  
+      <!-- onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" -->
+    </p>
+  <p>
+    <label for="weight">Weight <span></span></label>
+    <input id="weight" name="weight">
+    </p>
+    <p>
+      <input class="submit" type="submit" value="SUBMIT">
+    </p>
+</form>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="validation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+ <html>                                                                  
+ <head>                                                                  
+ <script type="text/javascript" src="jquery-1.6.4.min.js"></script>  
+  <script type="text/javascript" src="jquery.validate.js"></script>    
+  <script type="text/javascript" src="jquery.metadata.js"></script>    
+     
+   <script type="text/javascript">   
+
+   
+   $(document).ready(function(){      
+  
+   //Minimal code for works
+   //  $("#form1").validate();  
+
+ 
+    $("#form1").validate({
+    	messages: {dog: "Dog's error (guuuuaau)"}
+	});
+	  
+
+})//ready
+
+
+ </script>                                                            
+ <style type="text/css">
+ .green {
+	color: #060;
+	font-size: 12px;
+}
+ </style>
+ </head>                                                                 
+ <body>                                                                  
+                                           
+ <form name="form1" id="form1" method="post" action="">
+   <p>Name:
+  <input type="text" name="name" id="name" class="required" title="Please your name.">
+  <br>
+  <span class="green">class="required" title="Please your name. --Changing messages error or message personalized</span></p>
+   <p>Age: 
+     <input type="text" name="age" id="age" class="{required:true,number:true,max:100}"><br>
+     <span class="green">class="{required:true,number:true,max:100}" --Try values &gt; 100</span>
+   </p>
+   <p>Salary:
+     <input type="text" name="sal" id="sal" class="{required:true,number:true}"><br>
+<span class="green">class="{required:true,number:true}" --Required and only number</span>
+   </p>
+   <p> qualify this apport 8 to 10:
+     <input type="text" name="qualify" id="qualify"  class="{required:true,range:[8,10]}"><br>
+<span class="green">class="{required:true,range:[8,10]}" --Range 8 between 10 for my apport :) </span>
+   </p>
+   <p>Cars in home: 
+     <input type="text" name="thumbs" id="thumbs"  class="{required:true,number:true,max:5}" ><br>
+<span class="green">class="{required:true,number:true,max:5}" --My cars only 1, try values &gt;5 </span>
+   </p>
+   <p>Cat`s name (messages personalized)
+     <input 
+	 type="text" name="cat" id="cat" 	 
+	 class="{required:true,minlength:5,messages:{required:'cat´s name!!!',minlength:'minimal 5 chars for cat`s name '}}"   
+     ><br>
+    <span class="green"> class="{required:true,minlength:5,messages:{required:'cat´s name!!!',minlength:'minimal 5 chars for cat`s name '}}&quot; -- Message error for each validation (required,minlength)   </span></p>
+   <p>only digits 
+     <input 
+	 type="text" name="dgits" id="dgits" class="{required:true,digits:true}"><br>
+<span class="green">class="{required:true,digits:true}" --Only digits </span>
+   </p>
+   <p>email   
+     <input 
+	 type="text" name="mail" id="mail" class="{email:true}"><br>
+<span class="green">class="{email:true}" --email and no required </span>
+   <p>dogs
+     <input 
+	 type="text" name="dog" id="dog" class="{required:true}">
+     <br>
+   <span class="green">class="{required:true}" -- messages: {dog: "Dog's error (guuuuaau)"} in form validate</span>      
+   <p>
+     <input type="submit" name="button" id="button" value="Enviar">
+   </p>
+ </form>
+ 
+  
+ 
+ 
+</body>                                                                 
+ </html>

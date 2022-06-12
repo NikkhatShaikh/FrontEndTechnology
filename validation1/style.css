@@ -1,0 +1,26 @@
+body {
+    margin: 20px 0;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 1.25rem;
+    width: 300px;
+  }
+  
+  form, p {
+    margin: 20px;
+  }
+  
+  p.note {
+    font-size: 1rem;
+    color: red;
+  }
+  
+  input, textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    font-family: 'Lato';
+    width: 300px;
+    margin-top: 10px;
+  }
+  
